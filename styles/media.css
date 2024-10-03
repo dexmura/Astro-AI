@@ -1,0 +1,39 @@
+@media (max-width: 600px) {
+    .right-side{
+        display: none;
+    }
+
+    .avatar-bar{
+        background-color: rgb(73, 73, 73);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .header{
+        left: 70px;
+    }
+
+    .type-box{
+        left: 50px;
+        right: 0;
+    }
+
+    .bottom-container{
+        width: 400px;
+    }
+
+    .astro-logo-background{
+        right: 75%;
+        left: 25%;
+    }
+
+    .search{
+        width: 150px;
+    }
+    .search:focus{
+        width: 200px;
+    }
+
+    .type-box{
+        min-width: 350px;
+    }
+}

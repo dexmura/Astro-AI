@@ -1,0 +1,54 @@
+.header{
+    position: fixed;
+    top:0;
+    left:256px;
+    right:0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin: 20px;
+}
+
+.search{
+    padding: 7px;
+    font-size: 15px;
+    border: None;
+    border-radius: 10px;
+    background-color: rgb(91, 91, 91);
+    box-shadow: inset;
+    transition: width 0.8s ease;
+    width:200px;
+    color:white;
+}
+
+.search:focus{
+    outline: 1px solid white;
+    width: 400px;
+}
+
+
+.profile-box{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.user-photo{
+    width: 50px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+
+.user-photo:hover{
+    padding: 1px;
+}
+
+.user-photo:active{
+    opacity: 1;
+}

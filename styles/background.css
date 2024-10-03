@@ -1,0 +1,21 @@
+.astro-logo-background{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 55.5%;
+    left: 45.5%;
+    top: 50%;
+    bottom: 50%;
+}
+
+.astro-logo-section{
+    top: 20px;
+    right: 20px;
+}
+
+.astro-logo{
+    background: none;
+    width: 300px;
+    max-width: 300px;
+    opacity: 0.3;
+}
