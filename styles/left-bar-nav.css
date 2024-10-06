@@ -26,7 +26,6 @@
     height: 50px;
     cursor: pointer;
     transition: 0.2s;
-    opacity: 0.7;
 }
 
 .bottom-settings{
@@ -48,13 +47,12 @@
     margin-right:10px;
     margin-bottom: 10px;
     width: 40px;
-    border-radius: 30px;
+    border-radius: 5px;
     width: 50px;
     height: 50px;
     padding: 3px;
     cursor: pointer;
     transition: 0.2s;
-    opacity: 0.7;
 }
 
 .avatar-button{
@@ -77,6 +75,7 @@
 
 
 .right-side{
+    max-width: 170px;
     background-color: rgb(73, 73, 73);
     padding: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);

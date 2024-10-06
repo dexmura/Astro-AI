@@ -1,4 +1,10 @@
 @media (max-width: 600px) {
+    body{
+        padding-left: 70px;
+        overflow-y: auto;
+        
+    }
+
     .right-side{
         display: none;
     }
@@ -35,5 +41,9 @@
 
     .type-box{
         min-width: 350px;
+    }
+
+    .message-container {
+
     }
 }

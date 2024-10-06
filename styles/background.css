@@ -6,6 +6,7 @@
     left: 45.5%;
     top: 50%;
     bottom: 50%;
+    z-index: -1;
 }
 
 .astro-logo-section{
@@ -17,5 +18,5 @@
     background: none;
     width: 300px;
     max-width: 300px;
-    opacity: 0.3;
+    opacity: 0.1;
 }

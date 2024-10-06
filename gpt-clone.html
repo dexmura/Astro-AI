@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/type.css">
     <title>Astro</title>
 </head>
 <body>
     <header class="header">
         <div class="search-box">
-            <input type="text" class="search" placeholder="Search">
+            <input type="text" class="search" placeholder="Search" id="search">
         </div>
         <div class="profile-box">
-            <img src="/pict/user.png" alt="user" class="user-photo">
+            <button class="user-button">
+                <img src="/pict/user.png" alt="user" class="user-photo">
+            </button>
         </div>
     </header>
     <div class="astro-logo-background">
@@ -31,23 +34,18 @@
        <div class="avatar-bar">
         <div class="avatars">
             <div class="avatar-section">
-                <button class="avatar-button"><img src="/pict/chatgpt.png"
-                     alt="kitty"
+                <button class="avatar-button"><img src="/pict/chat.png"
+                     alt="chatgpt"
                     class="avatar-profile"></button>
             </div>
             <div class="avatar-section">
-                <button class="avatar-button"><img src="/pict/ai.png"
-                     alt="kitty"
-                    class="avatar-profile"></button>
-            </div>
-            <div class="avatar-section">
-                <button class="avatar-button"><img src="/pict/plus.png"
-                     alt="kitty"
+                <button class="avatar-button"><img src="/pict/gemin.png"
+                     alt="gemini"
                     class="avatar-profile"></button>
             </div>
         </div>
         <div class="bottom-settings">
-            <img src="/pict/settings.png" alt="settings"
+            <img src="/pict/new-set.png" alt="settings"
              class="avatar-settings">
         </div>
        </div>
@@ -65,19 +63,9 @@
                     </div>
                     <div class="tags-section"> 
                         <div class="tags">
-                            <p># new-videos</p>
-                        </div>
-                        <div class="tags">
-                            <p># updates</p>
-                        </div>
-                        <div class="tags">
-                            <p># faq</p>
-                        </div>
+                            <p># new-chat</p>
                     </div>
                 </div>
-            </div>
-            <div class="version-box">
-                <p>Version 0.0.1</p>
             </div>
        </div>
     </nav>
@@ -92,10 +80,10 @@
                 <input type="text" class="input-text">
             </div>
             <div class="button-bar-right">
-                <button class="button-send"><img src="/pict/right-arrow.png"
-                     alt="arrow" 
-                    class="send-img"></button>
+                <button class="button-send"><img src="/pict/right-arrow.png" alt="arrow" class="send-img"></button>
             </div>
     </div>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/type.js"></script>
 </body>
 </html>

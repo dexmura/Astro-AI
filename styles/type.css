@@ -1,0 +1,33 @@
+.message-container {
+    z-index: 1;
+    margin-top: 70px;
+    margin-left: 25px;
+    max-height: 560px; /* Максимальна висота контейнера */
+    overflow-y: auto; /* Дозволити прокрутку */
+    padding: 10px; /* Внутрішній відступ */
+    border-radius: 30px; /* Краї контейнера */
+    margin-bottom: 20px; /* Відступ знизу */
+    display: flex;
+    flex-direction: column; /* Розміщення повідомлень вертикально */
+}
+
+.message {
+    align-self: flex-start; /* Повідомлення вирівняні до початку контейнера */
+    font-size: 20px;
+    background-color: rgb(75, 75, 75); /* Колір фону повідомлення */
+    color: rgb(221, 221, 221); /* Колір тексту */
+    padding: 8px 12px; /* Внутрішній відступ */
+    border-radius: 10px 10px 10px 0px; /* Закруглення країв повідомлення */
+    margin-bottom: 10px; /* Відступ між повідомленнями */
+    word-wrap: break-word; /* Перенесення довгих слів */
+    max-width: 70%; /* Максимальна ширина повідомлення */
+    white-space: pre-wrap; /* Переносити текст на новий рядок */
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Стиль для підсвічування */
+.highlight {
+    background-color: rgba(255, 255, 0, 0.486); /* Колір підсвіченого тексту */
+}
+

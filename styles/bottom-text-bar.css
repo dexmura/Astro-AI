@@ -54,7 +54,7 @@
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     outline: none;
-    color: white;
+    color: rgb(221, 221, 221); /* Колір тексту */
 }
 
 .type-bar{
@@ -122,4 +122,11 @@
     opacity: 0.7;
 }
 
+.button-send {
+    opacity: 0.5; /* Задати початкову непрозорість */
+    transition: opacity 0.3s ease; /* Анімація для зміни непрозорості */
+}
 
+.button-send.active {
+    opacity: 1; /* Непрозорість при активному стані */
+}
