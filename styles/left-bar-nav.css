@@ -55,7 +55,7 @@
     transition: 0.2s;
 }
 
-.avatar-button{
+.avatar-button-gemini, .avatar-button-gpt{
     background: none;
     border: none;
     transition: 0.4s;
@@ -154,4 +154,11 @@
     margin-bottom: 10px;
     color: rgb(41, 41, 41);
     cursor:default;
+}
+
+/* Стиль для активного тегу */
+.active-tag {
+    background-color: #444; /* Темніший фон для підсвічування */
+    color: #fff; /* Білий текст */
+    border-radius: 10px; /* Закруглені кути */
 }

@@ -102,3 +102,5 @@ inputText.addEventListener('input', function() {
     }
 });
 
+
+
