@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/media.css">
     <link rel="stylesheet" href="/styles/type.css">
+    <link rel="stylesheet" href="/styles/settings.css">
+    <link rel="stylesheet" href="/styles/login.css">
     <title>Astro</title>
 </head>
 <body>
@@ -18,38 +20,83 @@
         <div class="search-box">
             <input type="text" class="search" placeholder="Search" id="search">
         </div>
+        <!-- Кнопка профілю -->
         <div class="profile-box">
-            <button class="user-button">
+            <button class="user-button" id="userButton">
                 <img src="/pict/user-photo.png" alt="user" class="user-photo">
             </button>
+        </div>
+        <!-- Спливаюче вікно для входу/реєстрації -->
+        <div id="loginModal" class="login-modal hidden">
+            <div class="login-modal-content">
+                <div class="login-head">
+                    <h2>Увійдіть або зареєструйтесь</h2>
+                    <span class="login-close">&times;</span>
+                </div>
+                <button id="googleLoginButton" class="login-google">Увійти через Google</button>
+                <div class="login-or-section">або</div>
+                <form id="loginForm" class="loginForm">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="email" autocomplete="no" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" class="password" required>
+                    <button type="submit" class="submit-login">Увійти</button>
+                </form>
+            </div>
         </div>
     </header>
     <div class="astro-logo-background">
         <div class="astro-logo-section">
-            <img src="/pict/helmet.png" alt="dis-logo" 
-            class="astro-logo">
+            <img src="/pict/helmet.png" alt="dis-logo" class="astro-logo">
         </div>
     </div>
     <nav class="left-nav">
-       <div class="avatar-bar">
-        <div class="avatars">
-            <div class="avatar-section">
-                <button class="avatar-button-gpt"><img src="/pict/chat.png"
-                     alt="chatgpt"
-                    class="avatar-profile"></button>
+        <div class="avatar-bar">
+            <div class="avatars">
+                <div class="avatar-section">
+                    <button class="avatar-button-gpt"><img src="/pict/chat.png" alt="chatgpt" class="avatar-profile"></button>
+                </div>
+                <div class="avatar-section">
+                    <button class="avatar-button-gemini"><img src="/pict/gemin.png" alt="gemini" class="avatar-profile"></button>
+                </div>
             </div>
-            <div class="avatar-section">
-                <button class="avatar-button-gemini"><img src="/pict/gemin.png"
-                     alt="gemini"
-                    class="avatar-profile"></button>
+            <!-- Кнопка налаштувань -->
+            <div class="bottom-settings">
+                <button class="button-settings">
+                    <img src="/pict/new-set.png" alt="settings"
+                     class="avatar-settings">
+                </button>
+            </div>
+            <!-- Модальне вікно налаштувань -->
+            <div id="settingsModal" class="modal hidden">
+                <div class="modal-content">
+                    <div class="head-settings">
+                        <h2>Налаштування</h2>
+                        <span class="close">&times;</span>
+                    </div>
+                    <form class="settings-form">
+                        <label for="theme">Тема:</label>
+                        <select id="theme">
+                            <option value="light">Світла</option>
+                            <option value="dark">Темна</option>
+                        </select>
+
+                        <label for="language">Мова:</label>
+                        <select id="language">
+                            <option value="en">Англійська</option>
+                            <option value="uk">Українська</option>
+                        </select>
+
+                        <label for="notifications">Сповіщення:</label>
+                        <input type="checkbox" id="notifications" checked>
+                        <label for="notifications">Включити</label>
+
+                        <button type="submit">Зберегти</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="bottom-settings">
-            <img src="/pict/new-set.png" alt="settings"
-             class="avatar-settings">
-        </div>
-       </div>
-       <div class="right-side">
+        <div class="right-side">
             <div class="head-section">
                 <div class="top-info">
                     <div class="info-sticker">
@@ -57,37 +104,35 @@
                             <p class="info-text">INFO</p>
                         </div>
                         <div class="plus-sticker">
-                            <img src="/pict/plusnew.png" alt="plus"
-                             class="plus-sign">
+                            <img src="/pict/plusnew.png" alt="plus" class="plus-sign">
                         </div>
                     </div>
                     <div class="tags-section"> 
-                        <div class="tags">
+                        <div class="tags"></div>
                     </div>
                 </div>
             </div>
-       </div>
+        </div>
     </nav>
-    <div class="message-container">
-
-    </div>
+    <div class="message-container"></div>
     <div class="type-box">
-            <div class="button-bar">
-                <button class="download-button"><img src="/pict/download.png"
-                     alt="download" 
-                    class="download-img">
-                </button>
-            </div>
-            <div class="type-bar">
-                <input type="text" class="input-text">
-            </div>
-            <div class="button-bar-right">
-                <button class="button-send"><img src="/pict/right-arrow.png" alt="arrow" class="send-img"></button>
-            </div>
+        <div class="button-bar">
+            <button class="download-button"><img src="/pict/download.png" alt="download" class="download-img"></button>
+        </div>
+        <div class="type-bar">
+            <input type="text" class="input-text">
+        </div>
+        <div class="button-bar-right">
+            <button class="button-send"><img src="/pict/right-arrow.png" alt="arrow" class="send-img"></button>
+        </div>
     </div>
+    
+    <!-- Підключення JavaScript -->
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/login.js"></script>
     <script src="/scripts/search.js"></script>
     <script src="/scripts/histoty-tags.js"></script>
     <script src="/scripts/type.js"></script>
+    <script src="/scripts/settings.js"></script>
 </body>
 </html>

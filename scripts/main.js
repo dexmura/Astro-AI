@@ -1,43 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //Обробка подій кліків для gpt
+    let activeAI = null; // Змінна для зберігання активного AI (ChatGPT або Gemini)
+
+    // Обробка подій кліків для ChatGPT
     const gptButton = document.querySelector('.avatar-button-gpt');
-    
+    const gptProfile = gptButton.querySelector('.avatar-profile'); // Отримуємо зображення профілю
+
     gptButton.addEventListener('click', function() {
-        alert("Ви натиснули на ChatGPT")
-        ///
+        activeAI = 'chatgpt'; // Встановлюємо активний AI як ChatGPT
+        highlightActiveAI(gptProfile); // Підсвічуємо активну секцію
+
+        // Логіка для підключення до API ChatGPT
+        // TODO: Виклик API ChatGPT на основі активного AI
     });
 
-    //Обробка подій кліків для gpt
+    // Обробка подій кліків для Gemini
     const geminiButton = document.querySelector('.avatar-button-gemini');
-    
+    const geminiProfile = geminiButton.querySelector('.avatar-profile'); // Отримуємо зображення профілю
+
     geminiButton.addEventListener('click', function() {
-        alert("Ви натиснули на Gemini")
-        ///
+        activeAI = 'gemini'; // Встановлюємо активний AI як Gemini
+        highlightActiveAI(geminiProfile); // Підсвічуємо активну секцію
+
+        // Логіка для підключення до API Gemini
+        // TODO: Виклик API Gemini на основі активного AI
     });
 
-    //Відкриття user
-    const userSelector = document.querySelector(".user-button");
+    // Функція для підсвічування активної секції
+    function highlightActiveAI(selectedProfile) {
+        // Видаляємо підсвітку з усіх профілів
+        document.querySelectorAll('.avatar-profile').forEach(profile => {
+            profile.classList.remove('selected'); // Видаляємо клас активності
+        });
 
-    userSelector.addEventListener('click', function(){
-        alert("Ви натиснули на кнопку Avatar");
-        //Додавання самої логіки для обробки
-    })
+        // Додаємо підсвітку до вибраної секції
+        selectedProfile.classList.add('selected'); // Додаємо обведення до зображення профілю
+    }
 
-
-    // 5. Анімація кнопки завантаження
+    // Анімація кнопки завантаження
     const downloadButton = document.querySelector('.download-button');
     
     downloadButton.addEventListener('click', function() {
         alert('Ви натиснули на кнопку завантаження!');
-        // Додай функціонал завантаження файлів тут
+        // TODO: Додай функціонал завантаження файлів тут
     });
-
-    // 6. Обробка подій налаштувань
-    const settingsButton = document.querySelector('.avatar-settings');
-    
-    settingsButton.addEventListener('click', function() {
-        alert('Налаштування відкриті');
-        // Додати тут логіку для відкриття меню налаштувань
-    });
-    
 });

@@ -1,0 +1,102 @@
+/* Стилі для модального вікна */
+.login-modal {
+    display: none; /* Сховати за замовчуванням */
+    position: fixed; /* Залишити вікно на місці */
+    z-index: 1000; /* Показати поверх інших елементів */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ширина на всю сторінку */
+    height: 100%; /* Висота на всю сторінку */
+    overflow: auto; /* Додати прокрутку, якщо потрібно */
+    background-color: rgb(0,0,0); /* Задній фон */
+    background-color: rgba(0,0,0,0.4); /* Прозорий чорний фон */
+    transition: 0.2s;
+}
+
+.login-modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #5c5c5c;
+    color: #dadada;
+    margin: 15% auto; /* 15% з верхньої частини та автоматичний відступ з боків */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Можна встановити ширину */
+    max-width: 500px; /* Максимальна ширина */
+    border-radius: 8px; /* Заокруглення країв */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+    margin-bottom: 20px;
+}
+
+.login-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+.login-google, .submit-login{
+    background-color: rgb(0, 176, 235);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.login-google:hover, .submit-login:hover{
+    background-color: whitesmoke;
+    color:rgb(0, 176, 235);
+}
+
+.login-google:active, .submit-login:active{
+    opacity: 0.5;
+}
+
+
+.login-close {
+    color: #aaa; /* Колір хрестика */
+    font-size: 28px; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+    transition: 0.2s;
+}
+
+.login-close:hover,
+.login-close:focus {
+    color: black; /* Колір при наведенні */
+    text-decoration: none; /* Без підкреслення */
+    cursor: pointer; /* Змінити курсор */
+}
+
+.login-or-section {
+    text-align: center; /* Вирівнювання тексту */
+    margin: 10px 0; /* Відступ */
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm input{
+    margin-bottom: 20px;
+}
+
+.email, .password{
+    background: grey;
+    padding: 5px;
+    border: none;
+    border-radius:5px ;
+    outline: 0.5px solid white;
+    transition: 0.2s;
+
+}
+
+.email:focus, .password:focus{
+    outline: 1px solid white;
+}

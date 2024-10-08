@@ -14,3 +14,15 @@ body{
     padding-left: 242px;
 }
 
+/* Світла тема */
+body.light {
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+/* Темна тема */
+body.dark {
+    background-color: rgb(56, 55, 55);
+}
+
+

@@ -1,5 +1,6 @@
 .left-nav{
     display: flex;
+    z-index: 0;
     position: fixed;
     top:0;
     left: 0;
@@ -15,6 +16,7 @@
     flex-direction: column;
     transition: 0.2s;
 }
+
 
 .avatar-profile{
     margin-left:10px;
@@ -147,14 +149,6 @@
     opacity: 1;
 }
 
-.version-box{
-    text-align: left;
-    align-self: flex-start;
-    width: 100%;
-    margin-bottom: 10px;
-    color: rgb(41, 41, 41);
-    cursor:default;
-}
 
 /* Стиль для активного тегу */
 .active-tag {
@@ -162,3 +156,22 @@
     color: #fff; /* Білий текст */
     border-radius: 10px; /* Закруглені кути */
 }
+
+.tag-input{
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    border: None;
+    border-radius: 5px;
+    background-color: rgb(91, 91, 91);
+    transition: width 0.8s ease;
+    color:rgb(187, 187, 187);
+    width: 150px;
+    outline: 1px solid white;
+}
+
+.avatar-profile.selected {
+    border: 2px solid #007BFF; /* Задайте колір обведення */
+    box-sizing: border-box; /* Забезпечити правильне врахування обведення */
+}
+
+
