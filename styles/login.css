@@ -8,9 +8,7 @@
     width: 100%; /* Ширина на всю сторінку */
     height: 100%; /* Висота на всю сторінку */
     overflow: auto; /* Додати прокрутку, якщо потрібно */
-    background-color: rgb(0,0,0); /* Задній фон */
     background-color: rgba(0,0,0,0.4); /* Прозорий чорний фон */
-    transition: 0.2s;
 }
 
 .login-modal-content {

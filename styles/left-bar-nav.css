@@ -55,6 +55,7 @@
     padding: 3px;
     cursor: pointer;
     transition: 0.2s;
+    opacity: 0.8;
 }
 
 .avatar-button-gemini, .avatar-button-gpt{
